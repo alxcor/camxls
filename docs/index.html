@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Spare parts, MLFB, IndustryMall, Web Scrapper, Spare parts evaluation, Totally Integrated Automation">
+<meta name="description" content="Excel macro for spare parts evaluation">
+<head><title>Excel VBA</title>
+  <style>
+    /* Setari generale: chenar, fonturi, etc. */
+    * { box-sizing: border-box;}
+    body {font-family: Arial, sans-serif; font-size: 100%;}
+    h1 {font-family: Garamond, serif; font-size: 2.500rem;}
+    h2 {font-family: Garamond, serif; font-size: 1.875rem;}
+    h3 {font-family: Garamond, serif; font-size: 1.300rem;}
+    table {border-collapse: collapse;width: 100%;}
+    th {border: 1px solid #004080;}
+    td {border: 1px solid #004080;}
+    tr:nth-child(odd) {background-color: rgba(120, 120, 170, 0.4);
+}    /* Logo: data/versiune; titlu; subtitlu */
+    .logo1p {
+      margin-top: 5px; margin-left: 15px; margin-right: 10px;
+      font-family: Arial; font-size: 0.8rem; line-height: 10px;
+      text-align: right; color: #004080; }
+    .logo2p { 
+      margin-top: 10px; margin-left: 15px; margin-right: 10px;
+      font-family: Arial; font-size: 3rem; line-height: 50px;
+      text-align: left; color: #303050; }
+    .logo3p {
+      margin-top: -20px; margin-left: 180px; margin-right: 10px;
+      font-family: Arial; font-size: 2.5rem; line-height: 35px;
+      text-align: left; color: #90909F; }
+    /* Bara meniu orizontal: setari fundal */
+    .menu_bar {
+      display: flex; flex-direction: row; align-items: center;
+      background-color: #303050;
+      background: linear-gradient(to left, #00000F, #505070);
+      color: #90909F; height: 50px; font-family: Arial;
+      position: sticky; top: 0;  padding: 0;}
+    /* Bara meniu orizontal: Menu Button Container */
+    .menu_ctn {
+      display: none; height: 100%; width: 60px; cursor: pointer;
+      flex-direction: column; justify-content: center;
+      align-items: center;}
+    /* Bara meniu orizontal: Menu Button */
+    .menu_btn, .menu_btn::before, .menu_btn::after {
+      display: block; background-color: #90909F; position: absolute;
+      height: 4px; width: 30px; border-radius: 2px;
+      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);}
+    .menu_btn::before { content: ''; margin-top: -8px;}
+    .menu_btn::after  { content: ''; margin-top:  8px;}
+    #menu_tog { display: none;}
+    #menu_tog:checked + .menu_ctn .menu_btn {
+      background: rgba(255, 255, 255, 0);}
+    #menu_tog:checked + .menu_ctn .menu_btn::before {
+      margin-top: 0px; transform: rotate(45deg);}
+    #menu_tog:checked + .menu_ctn .menu_btn::after {
+      margin-top: 0px; transform: rotate(-45deg);}
+    /* Bara meniu orizontal: lista orizontala */
+    .menu_lst {
+      display: flex; flex-direction: row; list-style-type: none;
+      margin: 0; padding: 0;}
+    /* Bara meniu orizontal: setari elemente lista li */
+    .menu_lst > li { margin: 0; overflow: hidden;}
+    .menu_lst li:hover { background:#404040;}
+    .menu_lst li.active {background-color: #6060A0;}
+    /* Bara meniu orizontal: setari aliniat li */
+    .menu_lst li a {
+      display: block; color: #F4F4FF; text-align: left;
+      padding: 14px; text-decoration: none; font-size: 1rem;}
+    .menu_lst li a:hover{ background-color: #404040;}
+    /* Element principal tip 1 */
+    .elem_top { background: url("images/header.png") center;
+      background-size: cover; padding: 0rem 2rem; padding-bottom: 4rem;
+      display: grid; align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));}
+    .elem_top > * {color: white;}
+    .elem_top > h1 {font-size: 3rem; padding-bottom: 0.5rem;
+      background-color: rgba(255,255,255,0.1); color: #00000F;}
+    /* Element principal tip 2 */
+    .elem_tos { padding: 0rem; margin: 0rem;}
+    .elem_tos > figure {height: 340px; overflow: hidden; margin:0rem;}
+    /* Element lista */
+    .elem_lst {padding: 0.2rem; margin 0.2rem;}
+    .elem_lst > ul {
+      list-style-type: none; display: grid; grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      padding: 0.2rem;}
+    .elem_lst > ul > li {border: 1px solid #90909F;}
+    .elem_lst > ul > li > figure {
+      height: 200px; overflow: hidden; margin:0.1rem;}
+    .elem_lst > ul > li > figure > img {width: 100%;}
+    .elem_lst > ul > li > figure > figcaption {
+      position: absolute; bottom: 0;
+      background-color: rgba(0,0,0,0.7); width: 100%;}
+    .elem_lst > ul > li > figure > figcaption > h3 {
+      color: white; padding: .75rem; font-size: 1.25rem;}
+    .elem_lst > ul > li > p {
+      font-size: 1rem; line-height: 1; padding: 0.2rem .2rem;
+      <!--color: #90909F;-->}
+    .elem_lst > ul > li > p > a {
+      font-size: 0.8rem; line-height: 1; padding: 0.5rem;
+      background-color: 90909F; text-decoration: none;
+      color: FFFFFF; border-radius: .25rem;
+      text-align: center; display: inline-block;
+    }
+    .footer {
+      background-color: #606060; color: white; padding: .25rem;
+      text-align: right; font-size: .5rem;}
+    @media (max-width: 800px) {
+      .menu_ctn { display: flex;}
+      #menu_tog ~ .menu_lst li {
+        height: 0; margin: 0; padding: 0; border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);}
+      #menu_tog:checked ~ .menu_lst li {
+        border: 1px solid #30303F; height: 2.5rem;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);}
+      .menu_lst {
+        position: absolute; top: 0; margin-top: 50px; left: 0;
+        flex-direction: column; width: 100%;
+        justify-content: center; align-items: center;}
+      .menu_lst > li {
+        display: flex; justify-content: left; margin: 0;
+        padding: 0.5rem 0; width: 100%; color: white;
+        background-color: #10102F;}
+    }
+  </style>
+</head>
+<!-- START BODY ... -->
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+  <!-- START Header Area ... -->
+  <a name="#top"> </a>
+  <div class="logo1p" align="center">v22.12.16; Dec.2022</div>
+  <div class="logo2p" align="center"><b>Excel VBA</b></div>
+  <div class="logo3p" align="center"><b>tools</b></div>
+  <!-- END Header Area ... -->
+  <!-- START Menu Bar ... -->
+  <section class="menu_bar">
+    <input id="menu_tog" type="checkbox" />
+    <label class='menu_ctn' for="menu_tog">
+      <div class='menu_btn'></div>
+    </label>
+    <ul class="menu_lst">
+      <li><a href="http://alxcor.github.io">Home</a></li>
+      <li><a href="index_ro.html">Romana</a></li>
+      <li class="active"><a href="http://github.com/alxcor/step7xls">Excel VBA</a></li>
+      <li><a href="#sparesweb">Spare Parts</a></li>
+      <li><a href="#converter">S5/S7 bitConvert</a></li>
+    </ul>
+  </section>
+<!-- END Menu Bar ... -->
+<!-- START Main Area ... -->
+<section class="elem_top">
+  <h1>Excel Tools</h1>
+</section>
+<br>
+<!--section class="elem_tos">
+  <figure>
+    <img alt=" " title=" " src="images/header.png" width=100%>
+  </figure>
+</section-->
+<section class="elem_lst">
+  <ul>
+    <li id="sparesweb">
+      <figure>
+        <img alt="Spare Parts" title="Spare Parts" src="images/spareweb.png">
+      </figure>
+      <p>
+        <b>SparesWeb.xls:</b> Spare parts availability analysis.<br><br>
+        An Excel macro-enabled workbook able to check the availability of Siemens Industry products.<br>
+        Simply add product codes (MLFB) into 2-nd column (column B) and press the button in order to run the VBA code.<br>
+        For each row, data is requested from Industry Mall web site and added to workbook.<br>
+        <br><br>
+        The VBA code is available on Github and may be changed or used as it is.<br>
+        A ready to use Excel file is also available for download.<br>
+        <br><br>
+        <a href=" ">VBA code...</a> <a href=" ">XLS download...</a>
+      </p>
+    </li>
+    <li id="converter">
+      <figure>
+        <img alt="S5Converter" title="S5Converter" src="images/converter.png">
+      </figure>
+      <p>
+        <b>S5Convert.xls:</b> Converter from different Step5 / Step7 data types to binary/hex and back...<br><br>
+        An Excel workbook for converting data, compatible with Excel, LibreOffice, etc.<br><br>
+        <table>
+          <tr><th>From</th><th colspan=7>To</th></tr>
+          <tr><td>Bin </td><td> - </td><td>Hex</td><td>Uint</td><td>Int</td><td>BCD</td><td>S5Timer</td><td>Real</td></tr>
+          <tr><td>Hex </td><td>Bin</td><td> - </td><td>Uint</td><td>Int</td><td>BCD</td><td>S5Timer</td><td>Real</td></tr>
+          <tr><td>Hex </td><td>Bin</td><td>Hex</td><td>Uint</td><td>Int</td><td>BCD</td><td>S5Timer</td><td>Real</td></tr>
+          <tr><td>Uint</td><td>Bin</td><td>Hex</td><td> -  </td><td>Int</td><td>BCD</td><td>S5Timer</td><td>Real</td></tr>
+          <tr><td>Int </td><td>Bin</td><td>Hex</td><td>Uint</td><td> - </td><td>BCD</td><td>S5Timer</td><td>Real</td></tr>
+          <tr><td>BCD </td><td>Bin</td><td>Hex</td><td>Uint</td><td>Int</td><td> - </td><td>S5Timer</td><td>Real</td></tr>
+          <tr><td>S5T </td><td>Bin</td><td>Hex</td><td>Uint</td><td>Int</td><td>BCD</td><td> -     </td><td>Real</td></tr>
+          <tr><td>Real</td><td>Bin</td><td>Hex</td><td>Uint</td><td>Int</td><td>BCD</td><td>S5Timer</td><td> -  </td></tr>
+          <tr><td>...</td><td colspan=7>...</td></tr>
+        </table>
+        <br><br>
+        <a href=" ">XLS download...</a>
+      </p>
+    </li>
+  </ul>
+</section>
+<!-- END Main Area ... -->
+<section class="footer">
+  alxcor@yahoo.com
+</section>
+</body></html>
