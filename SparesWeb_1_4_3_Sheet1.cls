@@ -8,21 +8,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub CommandButton1_Click()
-    Call EvaluateRow(0)
+    Call EvaluateRow
 End Sub
 
 Private Sub CommandButton2_Click()
-    Call EvaluateAll(0)
+    Call EvaluateAll
 End Sub
 
 Private Sub CommandButton3_Click()
-    Call EvaluateRow(2)
-End Sub
-
-Private Sub CommandButton4_Click()
-    Call EvaluateAll(2)
-End Sub
-
-Private Sub CommandButton5_Click()
     Call Report
 End Sub

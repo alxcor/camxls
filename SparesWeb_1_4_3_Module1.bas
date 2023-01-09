@@ -1,5 +1,5 @@
 Attribute VB_Name = "Module1"
-'v1.4.3 / 16.12.2023 [alxcor:221216]
+'v1.4.3 / 09.01.2023 [alxcor:230109]
 
 Sub setBorders(rowNumber)
     'set borders for a range of cells in a row
@@ -103,7 +103,7 @@ End Sub
 Sub ImportSieMallIntra(mlfbCode, rowNumber, netMode)
     'read data for a specific product code (MLFB) from Industry Mall web site
     'netMode: 0=Internet; 1=Intranet; 2=xmlHTTP version
-    On Error GoTo ErrHand:
+    On Error GoTo ErrHand:   'disable this line to see what is the error
     Dim IE
     Dim targetURL As String
     Dim webContent As String
@@ -389,12 +389,14 @@ ErrHand:
 EndSub:
 End Sub
 
-Sub EvaluateRow(netMode)
+Sub EvaluateRow()
     'read data for current row: on column 2 [B] should be a product code (MLFB) from Industry Mall web site
-    'netMode: 0=Internet; 1=Intranet
+    'netMode: 0=Internet; 1=Intranet; 2=xmlHTTP version
     Dim rowNumber As Long
     Dim mlfbCode As String
     Dim iCounter As Integer
+    Dim netMode As Integer
+    netMode = 2 'Use 2=xmlHTTP version
     'Range("C1:AZ1").EntireColumn.Clear
     'Cells.VerticalAlignment = xlTop
     '--------------------------------------------
@@ -412,12 +414,14 @@ Sub EvaluateRow(netMode)
     MsgBox "Done!"
 End Sub
 
-Sub EvaluateAll(netMode)
+Sub EvaluateAll()
     'read data for all non-empty rows >= 4: on column 2 [B] should be a product code (MLFB) from Industry Mall web site
-    'netMode: 0=Internet; 1=Intranet
+    'netMode: 0=Internet; 1=Intranet; 2=xmlHTTP version
     Dim rowNumber As Long
     Dim mlfbCode As String
     Dim iCounter As Integer
+    Dim netMode As Integer
+    netMode = 2 'Use 2=xmlHTTP version
     '--------------------------------------------
     'clear old data out and put titles in
     Range("C1:AZ1").EntireColumn.Clear
