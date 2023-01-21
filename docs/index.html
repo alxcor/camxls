@@ -7,6 +7,7 @@
   <style>
     /* Setari generale: chenar, fonturi, etc. */
     * { box-sizing: border-box;}
+    body {color: #000000; background-color: #FFFFFF;}
     body {font-family: Arial, sans-serif; font-size: 100%;}
     h1 {font-family: Garamond, serif; font-size: 2.500rem;}
     h2 {font-family: Garamond, serif; font-size: 1.875rem;}
@@ -14,18 +15,18 @@
     table {border-collapse: collapse;width: 100%;}
     th {border: 1px solid #004080;}
     td {border: 1px solid #004080;}
-    tr:nth-child(odd) {background-color: rgba(120, 120, 170, 0.4);
-}    /* Logo: data/versiune; titlu; subtitlu */
+    tr:nth-child(odd) {background-color: rgba(120, 120, 170, 0.4);}
+    /* Logo: data/versiune; titlu; subtitlu */
     .logo1p {
       margin-top: 5px; margin-left: 15px; margin-right: 10px;
       font-family: Arial; font-size: 0.8rem; line-height: 10px;
-      text-align: right; color: #004080; }
+      text-align: right; color: #90909F; }
     .logo2p { 
       margin-top: 10px; margin-left: 15px; margin-right: 10px;
       font-family: Arial; font-size: 3rem; line-height: 50px;
       text-align: left; color: #303050; }
     .logo3p {
-      margin-top: -20px; margin-left: 180px; margin-right: 10px;
+      margin-top: -20px; margin-left: 100px; margin-right: 10px;
       font-family: Arial; font-size: 2.5rem; line-height: 35px;
       text-align: left; color: #90909F; }
     /* Bara meniu orizontal: setari fundal */
@@ -121,10 +122,16 @@
         padding: 0.5rem 0; width: 100%; color: white;
         background-color: #10102F;}
     }
+    @media (prefers-color-scheme: light) {
+      body {color: #000000; background-color: #FFFFFF;}
+    }
+    @media (prefers-color-scheme: dark) {
+      body {color: #FFFFFF; background-color: #000000;}
+    }
   </style>
 </head>
 <!-- START BODY ... -->
-<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
   <div class="logo1p" align="center">v22.12.16; Dec.2022</div>
@@ -170,10 +177,14 @@
         For each row, data is requested from Industry Mall web site and added to workbook.<br>
         <br><br>
         The VBA code is available on Github and may be changed or used as it is.<br>
+        <br><br>
         A ready to use Excel file is also available for download.<br>
+        After download, unblock the file in order to use the macro.<br>
+        Right click on the file, select 'Properties' and in the 'Properties' dialog, at 'Security' select 'Unblock'<br><br>
+        <img alt="Unblock" title="Unblock" src="images/unblock.png">
         <br><br>
         <a href="http://github.com/alxcor/camxls">VBA code on GitHub...</a>
-        <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_3.xls">XLS download...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_3.xls" download>XLS download...</a>
       </p>
     </li>
     <li id="converter">
@@ -197,7 +208,7 @@
           <tr><td>...</td><td colspan=7>...</td></tr>
         </table>
         <br><br>
-        <a href="http://github.com/alxcor/camxls/raw/main/S5Convert.xlsx">XLS download...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/S5Convert.xlsx" download>XLS download...</a>
       </p>
     </li>
   </ul>

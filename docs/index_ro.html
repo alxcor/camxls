@@ -7,6 +7,7 @@
   <style>
     /* Setari generale: chenar, fonturi, etc. */
     * { box-sizing: border-box;}
+    body {color: #000000; background-color: #FFFFFF;}
     body {font-family: Arial, sans-serif; font-size: 100%;}
     h1 {font-family: Garamond, serif; font-size: 2.500rem;}
     h2 {font-family: Garamond, serif; font-size: 1.875rem;}
@@ -19,7 +20,7 @@
     .logo1p {
       margin-top: 5px; margin-left: 15px; margin-right: 10px;
       font-family: Arial; font-size: 0.8rem; line-height: 10px;
-      text-align: right; color: #004080; }
+      text-align: right; color: #90909F; }
     .logo2p { 
       margin-top: 10px; margin-left: 15px; margin-right: 10px;
       font-family: Arial; font-size: 3rem; line-height: 50px;
@@ -121,10 +122,16 @@
         padding: 0.5rem 0; width: 100%; color: white;
         background-color: #10102F;}
     }
+    @media (prefers-color-scheme: light) {
+      body {color: #000000; background-color: #FFFFFF;}
+    }
+    @media (prefers-color-scheme: dark) {
+      body {color: #FFFFFF; background-color: #000000;}
+    }
   </style>
 </head>
 <!-- START BODY ... -->
-<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+<body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
   <div class="logo1p" align="center">v22.12.16; Dec.2022</div>
@@ -166,14 +173,18 @@
       <p>
         <b>SparesWeb.xls:</b> Analiza disponibilitate piese de schimb MLFB.<br><br>
         Un fisier Excel cu macro-uri pentru verificarea disponibilitatii produselor Siemens Industry.<br>
-        Codurile de produs (MLFB) scrise in a 2-a coloana(coloana B) sunt cautate, cu ajutorul unui macro VBA, pe pagina web Siemens-Industry-Mall.<br>
+        Codurile de produs (MLFB) scrise in a 2-a coloana (coloana B) sunt cautate, cu ajutorul unui macro VBA, pe pagina web Siemens-Industry-Mall.<br>
         Pentru fiecare rand, datele de pe pagina web sunt adaugate in fisier.<br>
         <br><br>
-        Codul VBA este disponibil pe GitHub si poate fi copit intr-un alt fisier Excel.<br>
+        Codul VBA este disponibil pe GitHub si poate fi copiat intr-un alt fisier Excel.<br>
+        <br><br>
         Este disponibil pentru download si un fisier Excel gata de utilizare.<br>
+        Dupa download, deblocati fisierul pentru a putea utiliza macro.<br>
+        Click-dreapta pe fisier, selectati 'Properties' si in fereastra afisata, la 'Security' selectati 'Unblock'<br><br>
+        <img alt="Unblock" title="Unblock" src="images/unblock.png">
         <br><br>
         <a href="http://github.com/alxcor/camxls">Cod VBA pe GitHub...</a>
-        <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_3.xls">Download XLS...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_3.xls" download>Download XLS...</a>
       </p>
     </li>
     <li id="converter">
@@ -197,7 +208,7 @@
           <tr><td>...</td><td colspan=7>...</td></tr>
         </table>
         <br><br>
-        <a href="http://github.com/alxcor/camxls/raw/main/S5Convert.xlsx">XLS download...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/S5Convert.xlsx" download>XLS download...</a>
       </p>
     </li>
   </ul>
