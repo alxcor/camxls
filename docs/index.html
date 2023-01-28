@@ -75,7 +75,7 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));}
     .elem_top > * {color: white;}
     .elem_top > h1 {font-size: 3rem; padding-bottom: 0.5rem;
-      background-color: rgba(255,255,255,0.1); color: #F0F0FF;}
+      background-color: rgba(0,0,0,0.5); color: #F0F0FF;}
     /* Element principal tip 2 */
     .elem_tos { padding: 0rem; margin: 0rem;}
     .elem_tos > figure {height: 340px; overflow: hidden; margin:0rem;}
@@ -85,7 +85,7 @@
       list-style-type: none; display: list-item; grid-gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       padding: 0.2rem;}
-    .elem_lst > ul > li {border: 0px solid #90909F;border-bottom: 1px solid #90909F;}
+    .elem_lst > ul > li {border: 0px solid #90909F; border-bottom: 1px solid #90909F;}
     .elem_lst > ul > li > figure {
       height: 200px; overflow: hidden; margin:0.1rem;}
     .elem_lst > ul > li > figure > img {width: 100%;}
@@ -95,15 +95,18 @@
     .elem_lst > ul > li > figure > figcaption > h3 {
       color: white; padding: .75rem; font-size: 1.25rem;}
     .elem_lst > ul > li > p {
-      font-size: 1rem; line-height: 1; padding: 0.2rem .2rem;
+      font-size: 1rem; line-height: 1.1rem; padding: 0.2rem 0.2rem;
       <!--color: #90909F;-->}
     .elem_lst > ul > li > p > a {
       font-size: 0.8rem; line-height: 1; padding: 0.5rem;
       background-color: 40404F; text-decoration: none;
       color: FFFFFF; border-radius: .25rem;
       text-align: center; display: inline-block;}
+    .mono {font-family: monospace; margin-left: 20px;}
+    .par1 {margin-left: 20px;}
+    .maxp {max-width: 100%;}
     .footer {
-      background-color: #606060; color: white; padding: .25rem;
+      background-color: #40404F; color: white; padding: .25rem;
       text-align: right; font-size: .5rem;}
     @media (max-width: 800px) {
       .menu_ctn { display: flex;}
@@ -134,7 +137,7 @@
 <body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
-  <div class="logo1p" align="center">v22.12.16; Dec.2022</div>
+  <div class="logo1p" align="center">v23.01.28; Ian.2023</div>
   <div class="logo2p" align="center"><b>Excel VBA</b></div>
   <div class="logo3p" align="center"><b>tools</b></div>
   <!-- END Header Area ... -->
@@ -158,15 +161,10 @@
   <h1>Excel Tools</h1>
 </section>
 <br>
-<!--section class="elem_tos">
-  <figure>
-    <img alt=" " title=" " src="images/header.png" width=100%>
-  </figure>
-</section-->
 <section class="elem_lst">
   <ul>
     <li id="sparesweb">
-      <h2>Spare Parts Availability Analysis for MLFB</h2>
+      <h2>SparesWeb.xls: Spare Parts Availability Analysis for MLFB</h2>
       <figure>
         <img alt="Spare Parts" title="Spare Parts" src="images/spareweb.png">
       </figure>
@@ -188,7 +186,7 @@
       </p>
     </li>
     <li id="converter">
-      <h2>Converter for Step5 / Step7 data types</h2>
+      <h2>S5Convert.xls: Converter for Step5 / Step7 data types</h2>
       <figure>
         <img alt="S5Converter" title="S5Converter" src="images/converter.png">
       </figure>
