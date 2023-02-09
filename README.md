@@ -29,7 +29,7 @@ Open the document with Excel and enable Macros.
 
 A menu named Spares Web is added after Home tab, in Excel Ribbon.
 
-![Ribbon Menu](/docs/images/spareswebmenu.png)
+![Ribbon Menu](/docs/images/sparewebmenu.png)
 
 - "Clear All" deletes everything from "Data" worksheet.
 - "Set Header" add header data and format columns in "Data" worksheet.
@@ -47,9 +47,9 @@ Versions:
 - v1.4.1 / 2010? Functional version using IE connectivity
 
 Issues:
-* [feature] ([#3][i3])
-* [feature] ([#2][i2])
-* [bug] ([#1][i1])
+* [ ] [feature] ([#3][i3])
+* [x] [feature] ([#2][i2])
+* [x] [bug] ([#1][i1])
 
 [i1]: https://github.com/alxcor/camxls/issues/1
 [i2]: https://github.com/alxcor/camxls/issues/2
