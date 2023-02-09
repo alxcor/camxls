@@ -41,15 +41,10 @@ A menu named Spares Web is added after Home tab, in Excel Ribbon.
 To access the VBA code press ALT-F11 in Excel.
 
 Versions:
-- v1.4.4 / 01.02.2023 New version, with cmlHTTP, Ribbon menu, read data optimisations
+- v1.4.4 / 01.02.2023 New version, with xmlHTTP, Ribbon menu, read data optimisations
 - v1.4.3 / 09.01.2023 New version based on xmlHTTP
 - v1.4.2 / 10.12.2022 Minor bug fixes
 - v1.4.1 / 2010? Functional version using IE connectivity
-
-Issues:
-* [ ] [feature] ([#3][i1])
-
-[i1]: https://github.com/alxcor/camxls/issues/3
 
 
 ## S5Convert.xls: Converter for Step5 / Step7 data types
