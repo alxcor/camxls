@@ -46,6 +46,15 @@ Versions:
 - v1.4.2 / 10.12.2022 Minor bug fixes
 - v1.4.1 / 2010? Functional version using IE connectivity
 
+Issues:
+* [feature] ([#3][i3])
+* [feature] ([#2][i2])
+* [bug] ([#1][i1])
+
+[i1]: https://github.com/alxcor/camxls/issues/1
+[i2]: https://github.com/alxcor/camxls/issues/2
+[i3]: https://github.com/alxcor/camxls/issues/3
+
 
 ## S5Convert.xls: Converter for Step5 / Step7 data types
 
