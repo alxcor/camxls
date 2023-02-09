@@ -13,7 +13,7 @@ web page:  [alxcor.github.io/cam410](https://alxcor.github.io/camxls)
 
 An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
 
-Simply add product codes (MLFB) into 2-nd column (column B) and press the button in order to run the VBA code.
+Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the VBA code.
 
 For each row, data is requested from Industry Mall web site and added to workbook.
 
@@ -25,18 +25,24 @@ Right click on the file, select 'Properties' and in the 'Properties' dialog, at 
 
 ![unblock](/docs/images/unblock.png)
 
-Use "Read Row" to read data only for current Row or "Read All" to read all Rows.
-Excel macros are using only the xmlHTTP version.
-If an older version, using IE connectivity is needed, edit Sub EvaluateRow() and Sub EvaluateAll() and change the value for netMode variable:
-'netMode: 0=Internet; 1=Intranet; 2=xmlHTTP version
+Open the document with Excel and enable Macros.
 
-In version 1.4.3 the line is set to:
-netMode = 2 'Use 2=xmlHTTP version
+A menu named Spares Web is added after Home tab, in Excel Ribbon.
 
-Last version:
+![Ribbon Menu](/docs/images/spareswebmenu.png)
+
+- "Clear All" deletes everything from "Data" worksheet.
+- "Set Header" add header data and format columns in "Data" worksheet.
+- "Read Row" read data from internet for the spare part code (MLFB) in column A of the selected Row in "Data" worksheet.
+- "Read All" read data from internet for the spare part codes (MLFB) in column A in "Data" worksheet (up to Row 500).
+- "Write Report" read data from "Data" worksheet and generates a printable report in "Report" worksheet.
+- "Format Report" prepare a printable format of the data in "Report" worksheet.
+
+To access the VBA code press ALT-F11 in Excel.
+
+Versions:
+- v1.4.4 / 01.02.2023 New version, with cmlHTTP, Ribbon menu, read data optimisations
 - v1.4.3 / 09.01.2023 New version based on xmlHTTP
-
-Previous versions:
 - v1.4.2 / 10.12.2022 Minor bug fixes
 - v1.4.1 / 2010? Functional version using IE connectivity
 

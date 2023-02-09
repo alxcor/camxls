@@ -87,7 +87,7 @@
       padding: 0.2rem;}
     .elem_lst > ul > li {border: 0px solid #90909F; border-bottom: 1px solid #90909F;}
     .elem_lst > ul > li > figure {
-      height: 200px; overflow: hidden; margin:0.1rem;}
+      height: 300px; overflow: hidden; margin:0.1rem;}
     .elem_lst > ul > li > figure > img {width: 100%;}
     .elem_lst > ul > li > figure > figcaption {
       position: absolute; bottom: 0;
@@ -95,7 +95,7 @@
     .elem_lst > ul > li > figure > figcaption > h3 {
       color: white; padding: .75rem; font-size: 1.25rem;}
     .elem_lst > ul > li > p {
-      font-size: 1rem; line-height: 1.1rem; padding: 0.2rem 0.2rem;
+      font-size: 1rem; line-height: 1.2rem; padding: 0.2rem 0.2rem;
       <!--color: #90909F;-->}
     .elem_lst > ul > li > p > a {
       font-size: 0.8rem; line-height: 1; padding: 0.5rem;
@@ -171,7 +171,7 @@
       <p>
         <b>SparesWeb.xls:</b> Spare parts availability analysis.<br><br>
         An Excel macro-enabled workbook able to check the availability of Siemens Industry products.<br>
-        Simply add product codes (MLFB) into 2-nd column (column B) and press the button in order to run the VBA code.<br>
+        Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the VBA code.<br>
         For each row, data is requested from Industry Mall web site and added to workbook.<br>
         <br><br>
         The VBA code is available on Github and may be changed or used as it is.<br>
@@ -181,8 +181,21 @@
         Right click on the file, select 'Properties' and in the 'Properties' dialog, at 'Security' select 'Unblock'<br><br>
         <img alt="Unblock" title="Unblock" src="images/unblock.png">
         <br><br>
+        Open the document with Excel and enable Macros.<br>
+        <br>
+        A menu named Spares Web is added after Home tab, in Excel Ribbon.<br>
+        <img alt="Ribbon Menu" title="Ribbon Menu" src="images/sparewebmenu.png">
+        <br><br>
+        "Clear All" deletes everything from "Data" worksheet.<br>
+        "Set Header" add header data and format columns in "Data" worksheet.<br>
+        "Read Row" read data from internet for the spare part code (MLFB) in column A of the selected Row in "Data" worksheet.<br>
+        "Read All" read data from internet for the spare part codes (MLFB) in column A in "Data" worksheet (up to Row 500).<br>
+        "Write Report" read data from "Data" worksheet and generates a printable report in "Report" worksheet.<br>
+        "Format Report" prepare a printable format of the data in "Report" worksheet.<br>
+        <br><br>
+        To access the VBA code press ALT-F11 in Excel.<br><br>
         <a href="http://github.com/alxcor/camxls">VBA code on GitHub...</a>
-        <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_3.xls" download>XLS download...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_4.xls" download>XLS download...</a>
       </p>
     </li>
     <li id="converter">
