@@ -2,7 +2,7 @@
 
 ![header](/docs/images/header.png)
 
-web page:  [alxcor.github.io/cam410](https://alxcor.github.io/camxls)
+web page:  [alxcor.github.io/camxls](https://alxcor.github.io/camxls)
 
 ## SparesWeb.xls Spare Parts Availability Analysis for MLFB
 
