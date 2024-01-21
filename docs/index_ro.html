@@ -125,6 +125,14 @@
         padding: 0.5rem 0; width: 100%; color: white;
         background-color: #10102F;}
     }
+    .darkmode {
+      @media (prefers-color-scheme: light) {
+        color: #FFFFFF; background-color: #000000;
+      }
+      @media (prefers-color-scheme: dark) {
+        color: #000000; background-color: #FFFFFF;
+      }
+    }
     @media (prefers-color-scheme: light) {
       body {color: #000000; background-color: #FFFFFF;}
     }
@@ -137,7 +145,7 @@
 <body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
-  <div class="logo1p" align="center">v23.02.09; Feb.2023</div>
+  <div class="logo1p" align="center">v24.01.21; Ian.2024</div>
   <div class="logo2p" align="center"><b>Excel VBA</b></div>
   <div class="logo3p" align="center"><b>utilitare</b></div>
   <!-- END Header Area ... -->
@@ -148,9 +156,10 @@
       <div class='menu_btn'></div>
     </label>
     <ul class="menu_lst">
-      <li><a href="http://alxcor.github.io/index_ro">Acasa</a></li>
-      <li><a href="index.html">English</a></li>
-      <li class="active"><a href="http://github.com/alxcor/camxls">Excel VBA</a></li>
+      <li><a href="http://alxcor.github.io/index.html" style="padding: 4px;"><img src="images/ico_home.png" alt="Acasa" width="35" height="35"></a></li>
+      <li><a href="index.html" style="padding: 4px;"><img src="images/ico_lang.png" alt="English" width="35" height="35"></a></li>
+      <li><a style="padding: 4px;"><img src="images/ico_dark.png" alt="Fundal" width="35" height="35" onclick="changetodark()"></a></li>
+      <li><a href="http://github.com/alxcor/camxls">Github</a></li>
       <li><a href="#sparesweb">Piese de Schimb</a></li>
       <li><a href="#converter">Convertor biti</a></li>
     </ul>
@@ -227,4 +236,10 @@
 <section class="footer">
   alxcor@yahoo.com
 </section>
+<script>
+  function changetodark() {
+    var element = document.body;
+    element.classList.toggle("darkmode");
+  }
+</script>
 </body></html>
