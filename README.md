@@ -41,6 +41,10 @@ A menu named Spares Web is added after Home tab, in Excel Ribbon.
 To access the VBA code press ALT-F11 in Excel.
 
 Versions:
+- v1.4.5 / 15.05.2024
+ New options related to a spare-part successor check
+ New ribbon buttons for direct access to spares, successors, manuals, etc.
+ Dispatch time correction: due to changes on IndustryMall website
 - v1.4.4 / 01.02.2023 New version, with xmlHTTP, Ribbon menu, read data optimization
 - v1.4.3 / 09.01.2023 New version based on xmlHTTP
 - v1.4.2 / 10.12.2022 Minor bug fixes

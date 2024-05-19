@@ -145,7 +145,7 @@
 <body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
-  <div class="logo1p" align="center">v24.01.21; Ian.2024</div>
+  <div class="logo1p" align="center">v25.05.15; May.2025</div>
   <div class="logo2p" align="center"><b>Excel VBA</b></div>
   <div class="logo3p" align="center"><b>tools</b></div>
   <!-- END Header Area ... -->
@@ -192,15 +192,20 @@
         <br><br>
         Open the document with Excel and enable Macros.<br>
         <br>
-        A menu named Spares Web is added after Home tab, in Excel Ribbon.<br><br>
+        A menu named 'Spares Web' is added before 'Home' tab, in Excel Ribbon.<br><br>
         <img class="maxp" alt="Ribbon Menu" title="Ribbon Menu" src="images/sparewebmenu.png">
         <br><br>
-        "Clear All" deletes everything from "Data" worksheet.<br>
-        "Set Header" add header data and format columns in "Data" worksheet.<br>
-        "Read Row" read data from internet for the spare part code (MLFB) in column A of the selected Row in "Data" worksheet.<br>
-        "Read All" read data from internet for the spare part codes (MLFB) in column A in "Data" worksheet (up to Row 500).<br>
-        "Write Report" read data from "Data" worksheet and generates a printable report in "Report" worksheet.<br>
-        "Format Report" prepare a printable format of the data in "Report" worksheet.<br>
+        <b>"Clear All"</b> deletes everything from the current worksheet ('Data' or 'Report').<br>
+        <b>"Set Header"</b> add header data and format columns in current worksheet ('Data' or 'Report').<br>
+        <b>"Read Row"</b> read data from internet for the spare part code (MLFB) in column A of the selected Row (in 'Data' or 'Report' worksheet).<br>
+        <b>"Read All"</b> read data from internet for the spare part codes (MLFB) in column A ('Data' or 'Report' worksheet). There is a limit set to Row 500; may be changed in macros.<br>
+        <b>"Successor for Row"</b> check 'Successor' info in Column AC for the current row. If a successor part code is offered and the code is not on the next row, insert a new row with the successor MLFB code and reads all data. The new code for the successor part is marked with [succ.] prefix.<br>
+        <b>"Successor for All"</b> check 'Successor' info for all rows (up to row 500)<br>
+        <b>"Write Report"</b> read data from 'Data' worksheet and generates a printable report in 'Report' worksheet.<br>
+        <b>"Format Report"</b> prepare a printable format of the data in 'Report' worksheet.<br>
+        <b>"Spares on Web"</b> opens Spares On Web web page for current part number.<br>
+        <b>"Industry Mall"</b> opens IndustryMall web page for current part number.<br>
+        <b>"SIOS"</b> opens the Support web page for current part number.<br>
         <br><br>
         To access the VBA code press ALT-F11 in Excel.<br><br>
         <a href="http://github.com/alxcor/camxls">VBA code on GitHub...</a>

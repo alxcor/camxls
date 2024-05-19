@@ -145,7 +145,7 @@
 <body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
-  <div class="logo1p" align="center">v24.01.21; Ian.2024</div>
+  <div class="logo1p" align="center">v25.05.15; Mai.2025</div>
   <div class="logo2p" align="center"><b>Excel VBA</b></div>
   <div class="logo3p" align="center"><b>utilitare</b></div>
   <!-- END Header Area ... -->
@@ -191,15 +191,20 @@
         <img alt="Unblock" title="Unblock" src="images/unblock.png">
         <br><br>
         Deschideti documentul in Excel si activati utilizarea Macro.<br>
-        In Excel Ribbon, imdiat dupa tab-ul Home este adaugat un nou tab numit Spares Web.<br><br>
+        In Excel Ribbon, inainte de tab-ul 'Home' este adaugat un nou tab numit 'Spares Web'.<br><br>
         <img class="maxp" alt="Ribbon Menu" title="Ribbon Menu" src="images/sparewebmenu.png">
         <br><br>
-        "Clear All" sterge tot continutul tabelului "Data" worksheet.<br>
-        "Set Header" adauga un cap de tabel si formateaza coloanele din tabelul "Data" worksheet.<br>
-        "Read Row" citeste datele de pe internet pentru codul piesei (MLFB) din coloana A a randului selectat din tabelul "Data" worksheet.<br>
-        "Read All" citeste datele de pe internet pentru codurile pieselor (MLFB) din coloana A din tabelul "Data" worksheet (pana la randul 500).<br>
-        "Write Report" citeste datele din tabelul "Data" worksheet si genereaza un raport formatat pentru tiparire in "Report" worksheet.<br>
-        "Format Report" pregateste tabelul "Report" worksheet pentru tiparire.<br>
+        <b>"Clear All"</b> sterge tot continutul tabelului afisat (worksheet 'Data' sau 'Report').<br>
+        <b>"Set Header"</b> adauga un cap de tabel si formateaza coloanele din tabelul afisat (worksheet 'Data' sau 'Report')<br>
+        <b>"Read Row"</b> citeste datele de pe internet pentru codul piesei (MLFB) din coloana A a randului selectat din tabelul "Data" worksheet.<br>
+        <b>"Read All"</b> citeste datele de pe internet pentru codurile pieselor (MLFB) din coloana A din tabelul afisat (worksheet 'Data' sau 'Report'). Pentru citirea datelor este setata o limita la randul 500; limita poate fi modificata in codul VBA.<br>
+        <b>"Successor for Row"</b> verifica daca in coloana AC sunt date referitoare la un eventual succesor pentru piesa de pe randul curent. If a successor part code is offered and the code is not on the next row, insert a new row with the successor MLFB code and reads all data. The new code for the successor part is marked with [succ.] prefix.<br>
+        <b>"Successor for All"</b> verifica informatiile referitoare la un eventual 'Succesor' pentru piesa curenta pentru toate randurile (pana la randul 500)<br>
+        <b>"Write Report"</b> citeste datele din tabelul "Data" worksheet si genereaza un raport formatat pentru tiparire in "Report" worksheet.<br>
+        <b>"Format Report"</b> pregateste tabelul "Report" worksheet pentru tiparire.<br>
+        <b>"Spares on Web"</b> deschide pagina web Spares On Web pentru codul de piesa de pe randul selectat.<br>
+        <b>"Industry Mall"</b> deschide pagina web IndustryMall pentru codul de piesa de pe randul selectat.<br>
+        <b>"SIOS"</b> deschide pagina web cu informatii de service pentru codul de piesa de pe randul selectat.<br>
         <br><br>
         Pentru a accesa codul VBA apasati ALT-F11 in Excel.<br><br>
         <a href="http://github.com/alxcor/camxls">Cod VBA pe GitHub...</a>
