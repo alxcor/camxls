@@ -128,16 +128,20 @@
     .darkmode {
       @media (prefers-color-scheme: light) {
         color: #FFFFFF; background-color: #000000;
+        table, td, th {color: #FFFFFF}
       }
       @media (prefers-color-scheme: dark) {
         color: #000000; background-color: #FFFFFF;
+        table, td, th {color: #000000}
       }
     }
     @media (prefers-color-scheme: light) {
       body {color: #000000; background-color: #FFFFFF;}
+      table, td, th {color: #000000}
     }
     @media (prefers-color-scheme: dark) {
       body {color: #FFFFFF; background-color: #000000;}
+      table, td, th {color: #FFFFFF}
     }
   </style>
 </head>
