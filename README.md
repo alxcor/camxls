@@ -4,11 +4,15 @@
 
 web page:  [alxcor.github.io/camxls](https://alxcor.github.io/camxls)
 
+- **SparesWeb.xls** An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
+- **SparesWebLibre.ods** An LibreOffice Calc macro-enabled workbook able to check the availability of Siemens Industry products.
+- **S5Convert.xls** Excel or LibreOffice Calc based converter from different Step5 / Step7 data types to binary/hex and back
+
 ## SparesWeb.xls Spare Parts Availability Analysis for MLFB
 
 ![SparesWeb.xls](/docs/images/spareweb.png)
 
-**SparesWeb.xls:** Spare parts availability analysis.
+**SparesWeb.xls:**
 
 
 An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
@@ -17,10 +21,12 @@ Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet a
 
 For each row, data is requested from Industry Mall web site and added to workbook.
 
-The VBA code is available in a .bas file.
+The VBA code is available in a SparesWeb.bas file.
 
 A ready to use Excel file is also available for download.
+
 After download, unblock the file in order to use the macro.
+
 Right click on the file, select 'Properties' and in the 'Properties' dialog, at 'Security' select 'Unblock'
 
 ![unblock](/docs/images/unblock.png)
@@ -50,6 +56,43 @@ Versions:
 - v1.4.3 / 09.01.2023 New version based on xmlHTTP
 - v1.4.2 / 10.12.2022 Minor bug fixes
 - v1.4.1 / 2010? Functional version using IE connectivity
+
+![SparesWebLibre.ods](/docs/images/spareweblibre.png)
+
+**SparesWebLibre.ods:**
+
+
+An LibreOffice macro-enabled workbook able to check the availability of Siemens Industry products.
+
+Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the OOO BASIC code.
+
+For each row, data is requested from Industry Mall web site and added to workbook.
+
+The OOO BASIC code is available in SparesWebLibre.bas file.
+
+A ready to use LibreOffice Calc file is also available for download.
+
+After download, unblock the file in order to use the macro.
+
+Right click on the file, select 'Properties' and in the 'Properties' dialog, at 'Security' select 'Unblock'
+
+![unblock](/docs/images/unblock.png)
+
+Open the document with LibreOffice and enable Macros.
+
+The menu is located in the first two rows of the worksheet.
+
+![Menu Buttons](/docs/images/spareweblibremenu.png)
+
+- "Clear All" deletes everything from "Data" worksheet.
+- "Set Header" add header data and format columns in "Data" worksheet.
+- "Read Row" read data from internet for the spare part code (MLFB) in column A of the selected Row in "Data" worksheet.
+- "Read All" read data from internet for the spare part codes (MLFB) in column A in "Data" worksheet (up to Row 500).
+- "Write Report" read data from "Data" worksheet and generates a printable report in "Report" worksheet.
+- "Format Report" prepare a printable format of the data in "Report" worksheet.
+
+Versions:
+- v1.4.6 / 12.04.2025 First version, based on SparesWeb.xls with the same version
 
 
 ## S5Convert.xls: Converter for Step5 / Step7 data types

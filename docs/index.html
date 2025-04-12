@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Spare parts, MLFB, IndustryMall, Web Scrapper, Spare parts evaluation, Totally Integrated Automation">
 <meta name="description" content="Excel macro for spare parts evaluation">
-<head><title>Excel VBA</title>
+<head><title>Excel VBA / LibreOffice Docs BASIC</title>
   <style>
     /* Setari generale: chenar, fonturi, etc. */
     * { box-sizing: border-box;}
@@ -149,8 +149,8 @@
 <body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
-  <div class="logo1p" align="center">v24.11.09; Nov.2024</div>
-  <div class="logo2p" align="center"><b>Excel VBA</b></div>
+  <div class="logo1p" align="center">v25.04.12; Apr.2025</div>
+  <div class="logo2p" align="center"><b>Excel VBA / LibreOffice BASIC</b></div>
   <div class="logo3p" align="center"><b>tools</b></div>
   <!-- END Header Area ... -->
   <!-- START Menu Bar ... -->
@@ -164,25 +164,33 @@
       <li><a href="index_ro.html" style="padding: 4px;"><img src="images/ico_lang.png" alt="Romana" width="35" height="35"></a></li>
       <li><a style="padding: 4px;"><img src="images/ico_dark.png" alt="Light/Dark" width="35" height="35" onclick="changetodark()"></a></li>
       <li><a href="http://github.com/alxcor/camxls">Github</a></li>
-      <li><a href="#sparesweb">Spare Parts</a></li>
+      <li><a href="#sparesweb">Spare Parts XLS</a></li>
+      <li><a href="#sparesweblib">Spare Parts ODS</a></li>
       <li><a href="#converter">S5/S7 bitConvert</a></li>
     </ul>
   </section>
 <!-- END Menu Bar ... -->
 <!-- START Main Area ... -->
 <section class="elem_top">
-  <h1>Excel Tools</h1>
+  <h1>Excel / LibreOffice Tools</h1>
 </section>
 <br>
 <section class="elem_lst">
   <ul>
+    <li><p>
+    <table>
+    <tr><td><b>SparesWeb.xls</b></td><td> An Excel macro-enabled workbook able to check the availability of Siemens Industry products.</td></tr>
+    <tr><td><b>SparesWebLibre.ods</b></td><td> An LibreOffice Calc macro-enabled workbook able to check the availability of Siemens Industry products.<br></td></tr>
+    <tr><td><b>S5Convert.xls</b></td><td> Excel or LibreOffice Calc based converter from different Step5 / Step7 data types to binary/hex and back<br></td></tr>
+    </table>
+    </p></li>
     <li id="sparesweb">
       <h2>SparesWeb.xls: Spare Parts Availability Analysis for MLFB</h2>
       <figure>
         <img alt="Spare Parts" title="Spare Parts" src="images/spareweb.png">
       </figure>
       <p>
-        <b>SparesWeb.xls:</b> Spare parts availability analysis.<br><br>
+        <b>SparesWeb.xls</b><br><br>
         An Excel macro-enabled workbook able to check the availability of Siemens Industry products.<br>
         Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the VBA code.<br>
         For each row, data is requested from Industry Mall web site and added to workbook.<br>
@@ -214,6 +222,44 @@
         To access the VBA code press ALT-F11 in Excel.<br><br>
         <a href="http://github.com/alxcor/camxls">VBA code on GitHub...</a>
         <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_6.xlsm" download>XLS download...</a>
+      </p>
+    </li>
+    <li id="sparesweblib">
+      <h2>SparesWebLibre.ods: Spare Parts Availability Analysis for MLFB</h2>
+      <figure>
+        <img alt="Spare Parts" title="Spare Parts" src="images/spareweblibre.png">
+      </figure>
+      <p>
+        <b>SparesWebLibre.ods</b><br><br>
+        An LibreOffice macro-enabled workbook able to check the availability of Siemens Industry products.<br>
+        Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the BASIC code.<br>
+        For each row, data is requested from Industry Mall web site and added to workbook.<br>
+        <br><br>
+        The BASIC code is available on Github and may be changed or used as it is.<br>
+        <br><br>
+        A ready to use ODS file is also available for download.<br>
+        After download, unblock the file in order to use the macro.<br>
+        Right click on the file, select 'Properties' and in the 'Properties' dialog, at 'Security' select 'Unblock'<br><br>
+        <img alt="Unblock" title="Unblock" src="images/unblock.png">
+        <br><br>
+        Open the document with LibreOffice and enable Macros.<br><br>
+        The menu is located in the first two rows of the worksheet.<br><br>
+        <img class="maxp" alt="Menu" title="Menu" src="images/spareweblibremenu.png">
+        <br><br>
+        <b>"Clear All"</b> deletes everything from the current worksheet ('Data' or 'Report').<br>
+        <b>"Set Header"</b> add header data and format columns in current worksheet ('Data' or 'Report').<br>
+        <b>"Read Row"</b> read data from internet for the spare part code (MLFB) in column A of the selected Row (in 'Data' or 'Report' worksheet).<br>
+        <b>"Read All"</b> read data from internet for the spare part codes (MLFB) in column A ('Data' or 'Report' worksheet). There is a limit set to Row 500; may be changed in macros.<br>
+        <b>"Successor for Row"</b> check 'Successor' info in Column AC for the current row. If a successor part code is offered and the code is not on the next row, insert a new row with the successor MLFB code and reads all data. The new code for the successor part is marked with [succ.] prefix.<br>
+        <b>"Successor for All"</b> check 'Successor' info for all rows (up to row 500)<br>
+        <b>"Write Report"</b> read data from 'Data' worksheet and generates a printable report in 'Report' worksheet.<br>
+        <b>"Format Report"</b> prepare a printable format of the data in 'Report' worksheet.<br>
+        <b>"Spares on Web"</b> opens Spares On Web web page for current part number.<br>
+        <b>"Industry Mall"</b> opens IndustryMall web page for current part number.<br>
+        <b>"SIOS"</b> opens the Support web page for current part number.<br>
+        <br><br>
+        <a href="http://github.com/alxcor/camxls">BASIC code on GitHub...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/SparesWebLibre_1_4_6.ods" download>ODS download...</a>
       </p>
     </li>
     <li id="converter">

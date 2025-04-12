@@ -1,5 +1,5 @@
 Attribute VB_Name = "Module1"
-'v1.4.6 / 09.11.2024 [alxcor:241109]
+'MLFB Spare Parts Availability, Excel v1.4.6 / 09.11.2024 [alxcor:241109]
 
 Sub conClearAll(control As IRibbonControl)
     If (ActiveSheet.Name = "Data") Then

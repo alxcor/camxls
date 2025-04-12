@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Spare parts, MLFB, IndustryMall, Web Scrapper, Spare parts evaluation, Totally Integrated Automation">
 <meta name="description" content="Excel cu macro VBA pentru evaluare disponibilitate piese schimb">
-<head><title>Excel VBA</title>
+<head><title>Excel VBA / LibreOffice Docs BASIC</title>
   <style>
     /* Setari generale: chenar, fonturi, etc. */
     * { box-sizing: border-box;}
@@ -149,8 +149,8 @@
 <body>
   <!-- START Header Area ... -->
   <a name="#top"> </a>
-  <div class="logo1p" align="center">v24.11.09; Nov.2024</div>
-  <div class="logo2p" align="center"><b>Excel VBA</b></div>
+  <div class="logo1p" align="center">v25.04.12; Apr.2025</div>
+  <div class="logo2p" align="center"><b>Excel VBA / LibreOffice BASIC</b></div>
   <div class="logo3p" align="center"><b>utilitare</b></div>
   <!-- END Header Area ... -->
   <!-- START Menu Bar ... -->
@@ -164,25 +164,33 @@
       <li><a href="index.html" style="padding: 4px;"><img src="images/ico_lang.png" alt="English" width="35" height="35"></a></li>
       <li><a style="padding: 4px;"><img src="images/ico_dark.png" alt="Fundal" width="35" height="35" onclick="changetodark()"></a></li>
       <li><a href="http://github.com/alxcor/camxls">Github</a></li>
-      <li><a href="#sparesweb">Piese de Schimb</a></li>
+      <li><a href="#sparesweb">Piese de Schimb XLS</a></li>
+      <li><a href="#sparesweblib">Piese de Schimb ODS</a></li>
       <li><a href="#converter">Convertor biti</a></li>
     </ul>
   </section>
 <!-- END Menu Bar ... -->
 <!-- START Main Area ... -->
 <section class="elem_top">
-  <h1>Utilitare Excel</h1>
+  <h1>Utilitare Excel / LibreOffice</h1>
 </section>
 <br>
 <section class="elem_lst">
   <ul>
+    <li><p>
+    <table>
+    <tr><td><b>SparesWeb.xls</b></td><td> Un fisier Excel cu macro-uri pentru verificarea disponibilitatii produselor Siemens Industry.</td></tr>
+    <tr><td><b>SparesWebLibre.ods</b></td><td> Un fisier LibreOffice Calc cu macro-uri pentru verificarea disponibilitatii produselor Siemens Industry.<br></td></tr>
+    <tr><td><b>S5Convert.xls</b></td><td> Convertor Excel sau LibreOffice Calc pentru diversele tipuri de date Step5 / Step7 in format binar/hex/etc...<br></td></tr>
+    </table>
+    </p></li>
     <li id="sparesweb">
-      <h2>Analiza Disponibilitate Piese de Schimb MLFB</h2>
+      <h2>SparesWeb.xls: Analiza Disponibilitate Piese de Schimb MLFB</h2>
       <figure>
         <img alt="Piese de Schimb" title="Piese de Schimb" src="images/spareweb.png">
       </figure>
       <p>
-        <b>SparesWeb.xls:</b> Analiza disponibilitate piese de schimb MLFB.<br><br>
+        <b>SparesWeb.xls</b><br><br>
         Un fisier Excel cu macro-uri pentru verificarea disponibilitatii produselor Siemens Industry.<br>
         Codurile de produs (MLFB) scrise in prima coloana (coloana A) din Worksheet "Data" sunt cautate, la apasarea butonului "Read All" sau "Read Row", cu ajutorul unui macro VBA, pe pagina web Siemens-Industry-Mall.<br>
         Pentru fiecare rand, datele de pe pagina web sunt adaugate in fisier.<br>
@@ -213,6 +221,44 @@
         Pentru a accesa codul VBA apasati ALT-F11 in Excel.<br><br>
         <a href="http://github.com/alxcor/camxls">Cod VBA pe GitHub...</a>
         <a href="http://github.com/alxcor/camxls/raw/main/SparesWeb_1_4_6.xlsm" download>Download XLS...</a>
+      </p>
+    </li>
+    <li id="sparesweblib">
+      <h2>SparesWebLibre.ods: Analiza Disponibilitate Piese de Schimb MLFB</h2>
+      <figure>
+        <img alt="Piese de Schimb" title="Piese de Schimb" src="images/spareweblibre.png">
+      </figure>
+      <p>
+        <b>SparesWebLibre.ods</b><br><br>
+        Un fisier Libre Office Calc cu macro-uri pentru verificarea disponibilitatii produselor Siemens Industry.<br>
+        Codurile de produs (MLFB) scrise in prima coloana (coloana A) din Worksheet "Data" sunt cautate, la apasarea butonului "Read All" sau "Read Row", cu ajutorul unui macro BASIC, pe pagina web Siemens-Industry-Mall.<br>
+        Pentru fiecare rand, datele de pe pagina web sunt adaugate in fisier.<br>
+        <br><br>
+        Codul BASIC este disponibil pe GitHub si poate fi copiat intr-un alt fisier Libre Office Calc.<br>
+        <br><br>
+        Este disponibil pentru download si un fisier ODS gata de utilizare.<br>
+        Dupa download, deblocati fisierul pentru a putea utiliza macro.<br>
+        Click-dreapta pe fisier, selectati 'Properties' si in fereastra afisata, la 'Security' selectati 'Unblock'<br><br>
+        <img alt="Unblock" title="Unblock" src="images/unblock.png">
+        <br><br>
+        Deschideti documentul in Libre Office si activati utilizarea Macro.<br><br>
+        Meniul este localizat in primele doua randuri din tabel.<br><br>
+        <img class="maxp" alt="Menu" title="Menu" src="images/spareweblibremenu.png">
+        <br><br>
+        <b>"Clear All"</b> sterge tot continutul tabelului afisat (worksheet 'Data' sau 'Report').<br>
+        <b>"Set Header"</b> adauga un cap de tabel si formateaza coloanele din tabelul afisat (worksheet 'Data' sau 'Report')<br>
+        <b>"Read Row"</b> citeste datele de pe internet pentru codul piesei (MLFB) din coloana A a randului selectat din tabelul "Data" worksheet.<br>
+        <b>"Read All"</b> citeste datele de pe internet pentru codurile pieselor (MLFB) din coloana A din tabelul afisat (worksheet 'Data' sau 'Report'). Pentru citirea datelor este setata o limita la randul 500; limita poate fi modificata in codul VBA.<br>
+        <b>"Successor for Row"</b> verifica daca in coloana AC sunt date referitoare la un eventual succesor pentru piesa de pe randul curent. If a successor part code is offered and the code is not on the next row, insert a new row with the successor MLFB code and reads all data. The new code for the successor part is marked with [succ.] prefix.<br>
+        <b>"Successor for All"</b> verifica informatiile referitoare la un eventual 'Succesor' pentru piesa curenta pentru toate randurile (pana la randul 500)<br>
+        <b>"Write Report"</b> citeste datele din tabelul "Data" worksheet si genereaza un raport formatat pentru tiparire in "Report" worksheet.<br>
+        <b>"Format Report"</b> pregateste tabelul "Report" worksheet pentru tiparire.<br>
+        <b>"Spares on Web"</b> deschide pagina web Spares On Web pentru codul de piesa de pe randul selectat.<br>
+        <b>"Industry Mall"</b> deschide pagina web IndustryMall pentru codul de piesa de pe randul selectat.<br>
+        <b>"SIOS"</b> deschide pagina web cu informatii de service pentru codul de piesa de pe randul selectat.<br>
+        <br><br>
+        <a href="http://github.com/alxcor/camxls">Cod BASIC pe GitHub...</a>
+        <a href="http://github.com/alxcor/camxls/raw/main/SparesWebLibre_1_4_6.ods" download>Download ODS...</a>
       </p>
     </li>
     <li id="converter">
