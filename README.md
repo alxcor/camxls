@@ -4,8 +4,8 @@
 
 web page:  [alxcor.github.io/camxls](https://alxcor.github.io/camxls)
 
-- **SparesWeb.xls** An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
-- **SparesWebLibre.ods** An LibreOffice Calc macro-enabled workbook able to check the availability of Siemens Industry products.
+- **SparesWeb.xls** Not functional on the new sieportal website. An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
+- **SparesWebLibre.ods** Not functional on new sieportal website. An LibreOffice Calc macro-enabled workbook able to check the availability of Siemens Industry products.
 - **S5Convert.xls** Excel or LibreOffice Calc based converter from different Step5 / Step7 data types to binary/hex and back
 
 ## SparesWeb.xls Spare Parts Availability Analysis for MLFB
@@ -16,6 +16,8 @@ web page:  [alxcor.github.io/camxls](https://alxcor.github.io/camxls)
 
 
 An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
+
+Project not functional on the new sieportal webpage!
 
 Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the VBA code.
 
@@ -63,6 +65,8 @@ Versions:
 
 
 An LibreOffice macro-enabled workbook able to check the availability of Siemens Industry products.
+
+Project not functional on the new sieportal webpage!
 
 Simply add product codes (MLFB) into 1st column (column A) in "Data" Worksheet and press the "Read All" or "Read Row" button in order to run the OOO BASIC code.
 
