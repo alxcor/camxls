@@ -2,11 +2,11 @@
 
 ![header](/docs/images/header.png)
 
-web page:  [alxcor.github.io/camxls](https://alxcor.github.io/camxls)
-
-- **SparesWeb.xls** Not functional on the new sieportal website. Replaced by **SparesNet** https://github/alxcor/sparesnet
-  An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
+- **SparesWeb.xls** Not functional on the new sieportal website. An Excel macro-enabled workbook able to check the availability of Siemens Industry products.
+- Replaced by **SparesNet** https://github.com/alxcor/sparesNet.
 - **SparesWebLibre.ods** Not functional on new sieportal website. An LibreOffice Calc macro-enabled workbook able to check the availability of Siemens Industry products.
+- Replaced by **SparesNet** https://github.com/alxcor/sparesNet.
+
 - **S5Convert.xls** Excel or LibreOffice Calc based converter from different Step5 / Step7 data types to binary/hex and back
 
 ## SparesWeb.xls Spare Parts Availability Analysis for MLFB
